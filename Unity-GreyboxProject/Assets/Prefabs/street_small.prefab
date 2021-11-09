@@ -61,7 +61,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: 0
     m_TextureGroup: 3
@@ -224,17 +224,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 03000000
-  m_SelectedEdges:
-  - a: 14
-    b: 15
-  - a: 15
-    b: 12
-  - a: 13
-    b: 14
-  - a: 12
-    b: 13
-  m_SelectedVertices: 0e0000000f0000000c0000000d000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &7692098803115040623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -254,7 +246,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 09a3f601dc0233c43b3cc85b902bf121, type: 2}
+  - {fileID: 2100000, guid: e7e2a6baac7d2124e92013265cb4d5c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
