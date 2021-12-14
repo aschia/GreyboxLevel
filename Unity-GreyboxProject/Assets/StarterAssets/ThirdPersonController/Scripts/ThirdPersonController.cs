@@ -2,6 +2,7 @@
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
+using UnityEngine.SceneManagement;
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
@@ -313,6 +314,28 @@ namespace StarterAssets
 			
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		// Update is called once per frame
+		void OnTriggerEnter(Collider other)
+		{
+			if (other.gameObject.tag == "Key")
+			{
+				Minimap.keysToCollect--;
+				Destroy(other.gameObject);
+			}
+			else if (other.gameObject.tag == "Trophy")
+			{
+				SceneManager.LoadScene("WinScreen");
+			}
+			else if (other.gameObject.tag == "Guard")
+			{
+				SceneManager.LoadScene("LoseScreen");
+			}
+			else
+            {
+				Debug.Log("HI!");
+            }
 		}
 	}
 }
